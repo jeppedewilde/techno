@@ -1,0 +1,316 @@
+/* algemeen */
+body {
+    background-color: #000000;
+    background-image: url(../images/background.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'futura', sans-serif;
+    color: rgb(255, 255, 255);
+    min-height: 100vh;
+}
+
+header h1, h2, h3 {
+    text-transform: uppercase; /* Bron text-transform: Walter (docent) */
+}
+
+header h1, h2 {
+    display: flex;
+    justify-content: center;
+}
+
+header h1 {
+    color: rgb(0, 0, 0);
+    background-color: rgba(10, 167, 140);
+    padding: 0.2em;
+}
+
+h2 {
+    background-color: rgba(0, 0, 0, 0.70);
+    border: 0.1em solid rgb(255, 255, 255);
+    max-width: fit-content;
+    max-height: fit-content;
+    padding: 0.5em;
+    align-self: center;
+    margin-bottom: 0;
+}
+
+h2, h3 {
+    color: white;
+}
+
+/* flexbox met head+navbalk */
+body header {
+    display: flex;
+}
+
+/* nav balk */
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    list-style-type: none;
+    padding: 1em;
+    font-size: 1em;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: all 300ms ease;
+}
+
+nav a:hover, nav a:focus {
+    border: none;
+    background-color: white;
+    padding: 0.2em;
+    color: black;
+    font-size: 1.5em;
+}
+
+/* footer */
+footer {
+    margin-top: 5vw;
+    color: grey;
+    background-color: rgba(0, 0, 0, 0.65);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+footer a {
+    text-decoration: underline;
+    color: grey;
+}
+
+footer a:hover, footer a:focus {
+    text-decoration: none;
+    color: rgb(120, 135, 255);
+}
+
+/* home */
+.homepage h2 {
+    text-transform: uppercase;
+    font-size: 3em;
+    display: flex;
+    align-self: center;
+    max-width: fit-content;
+    background-color: rgba(10, 167, 140);
+    border: none;
+    color: black;
+    margin-bottom: 0.7em;
+}
+
+.homepage h3 {
+    font-size: 1em;
+}
+
+.introtekst {
+    text-align: center;
+    background-color: rgba(10, 167, 140, 0.65);
+    margin-bottom: 1em;
+}
+
+.introtekst p:nth-of-type(1) {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.homepage section {
+    display: flex;
+    align-self: center;
+    text-align: center;
+    gap: 10vw; /* bron gap property: https://www.geeksforgeeks.org/how-to-set-space-between-the-flexbox/ */
+}
+    
+/* dj's en bangers */
+main article ul li {
+    color: rgb(88, 194, 177);
+}
+
+main article ul li:hover {
+    color: white
+}
+
+main article div {
+    display: flex;
+}
+
+main article {
+    margin: 1.5em;
+    padding: 0.5em;
+    background-color: rgba(0, 0, 0, 0.65);
+}
+
+/* Bron audio tag: https://www.w3schools.com/html/html5_audio.asp */
+
+/* over techno */
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+main section {
+    display: flex;
+    margin: 1.5em;
+    padding: 0.5em;
+    background-color: rgba(0, 0, 0, 0.65);
+}
+
+main section div {
+    align-self: center;
+}
+
+main section div img {
+    max-width: 20vw;
+    max-height: 13vw;
+    padding: 1em;
+}
+
+.soundwavesize img {
+    max-height: 10vw;
+}
+
+/* raves */
+.lights-on img {
+    max-height: 20vw;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.lights-on a, .lights-off main a {
+    display: flex;
+    align-self: center;
+    font-size: 2em;
+    background-color: white;
+    text-decoration: none;
+    color: black;
+    border-radius: 0.5em;
+    padding: 0.2em;
+    max-width: fit-content;
+    margin: 2vw;
+}
+
+.lights-on a {
+    border: 0.2em solid transparent;
+}
+
+.lights-on a:hover, .lights-on a:focus {
+    animation-name: lasershow;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes lasershow { /* Bron keyframes: https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes */
+    0% {
+        border: 0.2em solid red;
+    }
+    10% {
+        border: 0.2em solid blue;
+    }
+    20% {
+        border: 0.2em solid yellow;
+    }
+    30% {
+        border: 0.2em solid green;
+    }
+    40% {
+        border: 0.2em solid orange;
+    }
+    50% {
+        border: 0.2em solid red;
+    }
+    60% {
+        border: 0.2em solid blue;
+    }
+    70% {
+        border: 0.2em solid yellow;
+    }
+    80% {
+        border: 0.2em solid green;
+    }
+    90% {
+        border: 0.2em solid orange;
+    }
+    100% {
+        border: 0.2em solid red;
+    }
+}
+
+/* raves: ervaring */
+.lights-off {
+    background-image: url(../images/ravebackground.jpeg);
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+.lights-off main p {
+    background: rgba(0, 0, 0, 0.65);
+    padding: 1em;
+    max-width: 40vw;
+}
+
+.lights-off main p:nth-of-type(2) {
+    align-self: center;
+}
+
+.lights-off main p:nth-of-type(3) {
+    align-self: last baseline;
+}
+
+.lights-off main p:nth-of-type(4) {
+    align-self: center;
+}
+
+.lights-off main p:nth-of-type(6) {
+    align-self: center;
+}
+
+.lights-off main a {
+    animation: lasershow 2s infinite;
+}
+
+.lights-off main a:hover, main a:focus {
+    background-color: black;
+    color: rgb(255, 255, 255);
+    border: 0.2em solid transparent;
+    animation: none;
+}
+
+/* Bronnenlijst */
+.bronvermelding main section {
+    display: flex; 
+    flex-direction: column; 
+}
+
+.bronvermelding main section div {
+    margin-right: auto;
+    margin-bottom: 2em;
+}
+
+.bronvermelding main section div ul li a {
+    color: grey;
+    text-decoration: none;
+}
+
+.bronvermelding main section div ul li a:hover, main section div ul li a:focus {
+    color: rgb(120, 135, 255);
+    text-decoration: underline;
+}
+
+.bronvermelding ul li {
+    list-style-type: none;
+}
+
+.bronvermelding main section h3 a {
+    text-decoration: none;
+    color: rgb(120, 135, 255);
+}
+
+.bronvermelding main section h3 a:hover, main section h3 a:focus {
+    color: black;   
+    background-color: white; 
+}
